@@ -6,7 +6,7 @@
 /*   By: arajaona <arajaona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:00:57 by arajaona          #+#    #+#             */
-/*   Updated: 2025/04/11 16:37:21 by arajaona         ###   ########.fr       */
+/*   Updated: 2025/04/11 17:30:04 by arajaona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,9 @@ void	compute_cylinder(t_obj_attr cyl, t_objects obj, t_ray ray, int *color)
 	if (scalar_product(cyl.normal, lighting) < 0)
 		cyl.normal = multiplication(cyl.normal, -1);
 	intensity = fmax(0, scalar_product(cyl.normal, lighting));
+	if (is_in_shadow(hit_point, obj, 
+		norm(substraction(obj.light.sys.origine, hit_point)),
+		mag(substraction(obj.light.sys.origine, hit_point))))
+		intensity *= 0.3;
 	compute_lighting(color, intensity, colour, obj);
 }
