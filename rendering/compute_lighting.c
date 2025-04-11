@@ -22,9 +22,9 @@ void	compute_lighting(int *color, double intense, t_color t, t_objects o)
 	diffuse.r *= intense * o.light.brightness_ratio;
 	diffuse.g *= intense * o.light.brightness_ratio;
 	diffuse.b *= intense * o.light.brightness_ratio;
-	ambient.r = o.ambient.color.r * o.ambient.color.r;
-	ambient.g = o.ambient.color.g * o.ambient.color.g; 
-	ambient.b = o.ambient.color.b * o.ambient.color.b;
+	ambient.r = o.ambient.color.r * o.ambient.ratio;
+	ambient.g = o.ambient.color.g * o.ambient.ratio; 
+	ambient.b = o.ambient.color.b * o.ambient.ratio;
 	final.r = fmin(255, diffuse.r + ambient.r);
 	final.g = fmin(255, diffuse.g + ambient.g);
 	final.b = fmin(255, diffuse.b + ambient.b);
