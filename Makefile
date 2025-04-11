@@ -47,6 +47,7 @@ SRC = ./main.c \
 	  ./parsing/ft_free.c \
 	  ./parsing/ft_free_objects.c \
 	  ./parsing/miniRT_parser.c \
+	  ./parsing/p_parse_ambient.c \
 	  ./parsing/p_parse_camera.c \
 	  ./parsing/p_parse_cylinder.c \
 	  ./parsing/p_parse_light.c \

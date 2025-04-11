@@ -6,7 +6,7 @@
 /*   By: arajaona <arajaona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 10:02:56 by nyrandri          #+#    #+#             */
-/*   Updated: 2025/04/08 13:46:51 by arajaona         ###   ########.fr       */
+/*   Updated: 2025/04/11 16:08:02 by arajaona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,12 @@ typedef struct s_color
 	int	b;
 } t_color;
 
+typedef struct s_ambient
+{
+	double	ratio;
+	t_color	color;
+}	t_ambient;
+
 typedef struct s_light
 {
 	t_cartesian_coordinate	sys;
@@ -136,8 +142,10 @@ typedef	struct s_cylindres
 
 typedef	struct s_objects
 {
-	int				no_camera;
-	int				no_light;
+	int			no_camera;
+	int			no_light;
+	int			no_ambient;
+	t_ambient	ambient;
 	t_camera 	camera;
 	t_light		light;
 	t_spheres	*spheres;

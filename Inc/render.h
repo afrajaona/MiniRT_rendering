@@ -6,7 +6,7 @@
 /*   By: arajaona <arajaona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:27:15 by arajaona          #+#    #+#             */
-/*   Updated: 2025/04/08 15:09:08 by arajaona         ###   ########.fr       */
+/*   Updated: 2025/04/11 16:31:59 by arajaona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "math_utils.h"
 
 void	compute_cylinder(t_obj_attr cyl, t_objects obj, t_ray ray, int *color);
+void	compute_lighting(int *color, double intense, t_color t, t_objects o);
 void    compute_pixel(double ndc_x, double ndc_y, t_objects obj, int *color);
 void	compute_plane(t_obj_attr plane, t_objects obj, t_ray ray, int *color);
 void	compute_sphere(t_obj_attr sphere, t_objects obj, t_ray ray, int *color);

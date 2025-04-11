@@ -6,7 +6,7 @@
 /*   By: arajaona <arajaona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:07:56 by arajaona          #+#    #+#             */
-/*   Updated: 2025/04/03 15:40:01 by arajaona         ###   ########.fr       */
+/*   Updated: 2025/04/11 16:13:19 by arajaona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int 	parse_camera(char *s, t_objects *o);
 int		p_vec(char *s, int *i, t_point *o, char *bloc);
 int 	parse_cylinder(char *s, t_objects *o);
 int		parse_light(char *s, t_objects *o);
+int		parse_ambient(char *s, t_objects *o);
 int 	p_double(char *s, int *i, double *o, char *err);
 int 	parse_plane(char *s, t_objects *o);
 int 	parse_sphere(char *s, t_objects *o);

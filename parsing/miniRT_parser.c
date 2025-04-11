@@ -6,7 +6,7 @@
 /*   By: arajaona <arajaona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:01:37 by arajaona          #+#    #+#             */
-/*   Updated: 2025/04/04 13:38:14 by arajaona         ###   ########.fr       */
+/*   Updated: 2025/04/11 16:09:07 by arajaona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void init_objects(t_objects *base)
 {
 	base->no_camera = 1;
 	base->no_light = 1;
+	base->no_ambient = 1;
 	base->spheres = NULL;
 	base->planes = NULL;
 	base->cylindres = NULL;
@@ -53,7 +54,7 @@ void init_objects(t_objects *base)
 
 void	check_emptiness(t_objects *base)
 {
-		if(base->no_camera || base->no_light
+		if(base->no_camera || base->no_light || base->no_ambient
 			||!base->spheres || !base->planes || !base->cylindres)
 		{
 			ft_free_objects(base);
@@ -66,7 +67,9 @@ int	parse_call(char *line, int i, t_objects *base)
 {
 	int	ret;
 
-	if (line[i] == 'C')
+	if (line[i] == 'A')
+		ret = parse_ambient(line, base);
+	else if (line[i] == 'C')
 		ret = parse_camera(line, base);
 	else if (line[i] == 'L')
 		ret = parse_light(line, base);

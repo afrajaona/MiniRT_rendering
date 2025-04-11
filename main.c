@@ -17,25 +17,7 @@ int	main(int ac, char **av)
 	t_data		data;
 	t_objects	object;
 
-    parse(ac, av[1], &object);
-	// object.spheres = calloc(1, sizeof(t_spheres));
-	// object.spheres->member = calloc(3, sizeof(t_sphere));
-	// object.spheres->nb = 2;
-	// object.spheres->index = 0;
-	// object.spheres->member[0].sys.origine.x = 20;
-	// object.spheres->member[0].sys.origine.y = 50;
-	// object.spheres->member[0].sys.origine.z = 50;
-	// object.spheres->member[0].color.r = 10;
-	// object.spheres->member[0].color.g = 0;
-	// object.spheres->member[0].color.b = 255;
-	// object.spheres->member[0].diametre = 60;
-	// object.spheres->member[1].sys.origine.x = -30;
-	// object.spheres->member[1].sys.origine.y = 0;
-	// object.spheres->member[1].sys.origine.z = 50;
-	// object.spheres->member[1].color.r = 10;
-	// object.spheres->member[1].color.g = 0;
-	// object.spheres->member[1].color.b = 255;
-	// object.spheres->member[1].diametre = 60;
+    	parse(ac, av[1], &object);
 	if (init_data(&data) == -1)
 		return (1);
 	event(&data);
