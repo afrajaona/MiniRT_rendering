@@ -34,6 +34,7 @@ NAME = miniRT
 
 SRC = ./main.c \
 	  ./rendering/compute_cylinder.c \
+          ./rendering/compute_lighting.c \
 	  ./rendering/compute_pixel.c \
 	  ./rendering/compute_plane.c \
 	  ./rendering/compute_sphere.c \
